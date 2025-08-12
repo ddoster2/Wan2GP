@@ -81,6 +81,7 @@ echo "Starting Wan2GP application in background..."
 cd /workspace/Wan2GP
 echo "Doing git pull"
 git pull
+nohup python3 pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/test/cu124
 echo "Doing update requirements.txt"
 nohup python3 pip install -r requirements.txt
 
