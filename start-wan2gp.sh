@@ -79,6 +79,7 @@ WAN2GP_ACCESS_PORT=7862
 # Start our application in the background
 echo "Starting Wan2GP application in background..."
 cd /workspace/Wan2GP
+git stash
 echo "Doing git pull"
 git pull
 nohup python3 pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/test/cu124
