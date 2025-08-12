@@ -79,6 +79,10 @@ WAN2GP_ACCESS_PORT=7862
 # Start our application in the background
 echo "Starting Wan2GP application in background..."
 cd /workspace/Wan2GP
+echo "Doing git pull"
+git pull
+echo "Doing update requirements.txt"
+nohup python3 pip install -r requirements.txt
 
 # Use our own nginx proxy: 7862 (nginx with auth) → 7860 (gradio)
 SERVER_NAME="127.0.0.1"
